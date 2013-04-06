@@ -27,6 +27,7 @@ public class UDPServer extends Thread{
     }
     
     public void run(){
+        System.out.println("LEvantando servidor en " + ip + ":" + port);
         try{
             DatagramSocket aSocket = new DatagramSocket( Integer.parseInt( port ) );
             while(true){

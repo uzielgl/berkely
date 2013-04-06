@@ -15,11 +15,16 @@ public class Berkeley {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        /*
         Clock c = new Clock( 30 );
         Clock c2 = new Clock();
         c.start();
         c2.start();
         
         c.updateClock( 30 );
+        * */
+        new BerkeleyGUI().setVisible(true);
+        new BerkeleyGUI().setVisible(true);
+        new BerkeleyGUI().setVisible(true);
     }
 }

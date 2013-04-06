@@ -18,3 +18,12 @@ BigDecimal a = System.currentTimeMillis() / 1000;
 println a.toBigInteger()
 
 println new Random().nextInt(100);
+
+random = new Random()
+randomInt = new Random().nextInt(600) - 300
+
+println randomInt;
+
+long avg_time = ( 7 / 2 );
+
+print avg_time

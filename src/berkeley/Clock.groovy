@@ -46,13 +46,25 @@ class Clock extends Thread{
             }       
             timestamp++;
             updateCalendar( timestamp );
-            println this;
+            for( ClockListener cl: listeners ) cl.onChangeSecond( this );
+            
         }
     }
     
     
     public void updateCalendar(long timestamp){
         calendar.setTimeInMillis( timestamp * 1000 );
+    }
+    
+    public void updateTimestamp( long timestamp ){
+        
+    }
+    
+    public void updateTimestamp(int h, int m, int s){
+        //Calendar.getTimeInMillis() /
+        println calendar.YEAR;
+        calendar.set( calendar.get( Calendar.YEAR ), calendar.get( Calendar.MONTH ), calendar.get( Calendar.DAY_OF_MONTH), h, m, s);
+        timestamp = calendar.getTimeInMillis() / 1000; // /
     }
     
     /** Actualiza el reloj según un desfaze que le da el coordinador
@@ -65,12 +77,13 @@ class Clock extends Thread{
         if( gap > 0){ //relantizamos
             this.gap = gap;
         }else{ //Agregamos los segundos
-            updateCalendar( timestamp + abs(gap) );
+            updateCalendar( timestamp + Math.abs(gap) );
+            timestamp += Math.abs(gap);
         }
     }
     
     public String toString(){
-        SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         df.setCalendar( calendar );
         return "ID: $id - " + df.format( calendar.getTime() );
     }

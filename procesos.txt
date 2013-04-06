@@ -1,0 +1,7 @@
+{
+	"1": {"ip": "127.0.0.1", "port": "1501", "coordinador": false},
+	"2": {"ip": "127.0.0.1", "port": "1502", "coordinador": false},
+	"3": {"ip": "127.0.0.1", "port": "1503", "coordinador": false},
+	"4": {"ip": "127.0.0.1", "port": "1504", "coordinador": false},
+	"5": {"ip": "127.0.0.1", "port": "1505", "coordinador": true}
+}

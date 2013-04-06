@@ -16,5 +16,15 @@ class Message implements Serializable{
     
     public int type;
     
+    public long timestamp;
+    
+    public int gap;
+    
+    public Message(int type){
+        this.type = type;
+    }
+    
+    public Message(){
+    }
 }
 
