@@ -6,7 +6,7 @@ package berkeley;
 
 /**
  *
- * @author Dai
+ * @author uzielgl
  */
 public class BerkeleyGUI extends javax.swing.JFrame {
 
