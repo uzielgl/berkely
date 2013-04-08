@@ -62,7 +62,6 @@ class Clock extends Thread{
     
     public void updateTimestamp(int h, int m, int s){
         //Calendar.getTimeInMillis() /
-        println calendar.YEAR;
         calendar.set( calendar.get( Calendar.YEAR ), calendar.get( Calendar.MONTH ), calendar.get( Calendar.DAY_OF_MONTH), h, m, s);
         timestamp = calendar.getTimeInMillis() / 1000; // /
     }

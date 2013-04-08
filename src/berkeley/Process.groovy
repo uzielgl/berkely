@@ -92,6 +92,11 @@ class Process implements ComunicatorListener{
         if( m.type == Message.TYPE_SET_HOUR){
             clock.updateClock( m.gap );
             window.addHistory( "Desface de " + m.gap );
+            if( m.gap > 0 ){
+                window.addHistory( " Relantizando el reloj " );
+            }else{
+                window.addHistory( " Actualizando el reloj");
+            }
         }
     }
     
