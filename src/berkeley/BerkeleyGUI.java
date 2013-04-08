@@ -199,7 +199,6 @@ public class BerkeleyGUI extends javax.swing.JFrame implements ClockListener{
         lblClock.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblClock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblClock.setText("10:10:10");
-        lblClock.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
